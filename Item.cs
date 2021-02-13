@@ -2,20 +2,20 @@ namespace stone
 {
     public class Item
     {
-        string Nome;
-        int Preco;
-        int Quantidade;
-        public Item(string nome, int preco, int quantidade)
+        string Name;
+        int Price;
+        int Quantity;
+        public Item(string name, int price, int quantity)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
+            Name = name;
+            Price = price;
+            Quantity = quantity;
         }
 
-        public int  CalculaItem()
+        public int  CalculateItem()
         {
 
-            return Preco * Quantidade;
+            return Price * Quantity;
         }
 
     }

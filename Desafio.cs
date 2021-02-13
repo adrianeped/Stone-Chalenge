@@ -14,24 +14,25 @@ namespace stone
 
 
             int total = 0;
-            int valor = 0;
-            int resto = 0;
+            int value = 0;
+            int rest = 0;
+            
             foreach(Item item in items)
             {
-                total += item.CalculaItem();
+                total += item.CalculateItem();
             }
 
-            valor = total / emails.Count;
-            resto = total % emails.Count;
+            value = total / emails.Count;
+            rest = total % emails.Count;
             
             for(int index = 0; index < emails.Count; index++)
             {
-                int valorAPagar = valor;
+                int valueToPay = value;
                 if(index == 0) 
                 {
-                    valorAPagar += resto;
+                    valueToPay += rest;
                 }
-                splitBill.Add(emails[index], valorAPagar);
+                splitBill.Add(emails[index], valueToPay);
             }
         }
     }
